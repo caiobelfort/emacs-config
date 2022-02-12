@@ -10,11 +10,6 @@
         use-package-expand-minimally t))
 
 
-
-(use-package which-key
-  :ensure t
-  )
-
 (use-package company
   :ensure t
   :defer t
@@ -38,6 +33,9 @@
   :init (add-hook 'global-company-mode-hook #'company-quickhelp-mode))
 
 
+(use-package counsel
+  :demand t)
+
 (use-package ivy
   :init
   (setq ivy-use-virtual-buffers t)
@@ -45,10 +43,7 @@
   :bind(
 	("C-x C-f" . 'counsel-find-file)
 	("M-x" . 'counsel-M-x)
-	)
-  
-	 
- )
+	))
 
 
 (use-package python-mode
@@ -56,7 +51,7 @@
 
 (use-package lsp-pyright
   :hook ((python-mode . (lambda () (require 'lsp-pyright)))
-	   (python-mode . lsp-deferred))
+	  (python-mode . lsp-deferred))
   :config
   ;; these hooks can't go in the :hook section since lsp-restart-workspace
   ;; is not available if lsp isn't active
