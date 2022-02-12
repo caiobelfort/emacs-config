@@ -10,6 +10,11 @@
         use-package-expand-minimally t))
 
 
+
+(use-package which-key
+  :ensure t
+  )
+
 (use-package company
   :ensure t
   :defer t
@@ -70,4 +75,8 @@
   (conda-env-initialize-eshell))
 
 (use-package magit)
-(use-package projectile)
+(use-package projectile
+  :init
+  (setq projectile-project-search-path '(( "~/projects" . 1))))
+
+  
