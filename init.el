@@ -18,6 +18,9 @@
 	(package-install 'use-package))
 (require 'use-package)
 
+
+(add-to-list 'load-path  "~/.emacs.d/")
+
 (load "editor.el")
 (load "packages.el")
 
