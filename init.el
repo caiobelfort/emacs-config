@@ -18,8 +18,8 @@
 	(package-install 'use-package))
 (require 'use-package)
 
-(load-file "editor.el")
-(load-file "packages.el")
+(load "editor.el")
+(load "packages.el")
 
 
 
