@@ -10,6 +10,9 @@
         use-package-expand-minimally t))
 
 
+(use-package which-key
+  :demand t)
+
 (use-package company
   :ensure t
   :defer t
@@ -70,8 +73,15 @@
   (conda-env-initialize-eshell))
 
 (use-package magit)
+
 (use-package projectile
   :init
-  (setq projectile-project-search-path '(( "~/projects" . 1))))
+  (setq projectile-project-search-path '(( "~/projects" . 2)))
+  ;; TODO DEFINIR KEYMAPS
+  )
 
-  
+
+;; TODO CONFIGURAR ESSE PACOTES
+(use-package dockerfile-mode)
+(use-package treemacs)
+(use-package ejc-sql)
